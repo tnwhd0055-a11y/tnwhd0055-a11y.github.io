@@ -1,0 +1,1667 @@
+<!DOCTYPE html><html lang="ko"><head>
+
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>피식푸드 — 전자책 상세페이지</title>
+<link rel="stylesheet" as="style" crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --panel: #111312;
+    --green: #1FFF73;
+    --green-2: #16d95f;
+    --ink: #ffffff;
+    --muted: #8a9090;
+    --card-border: rgba(255,255,255,0.10);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  html, body {
+    background: #050505;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: var(--ink);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* ===== The deliverable: a 1080px-wide tall page ===== */
+  .page {
+    width: 1080px;
+    background: var(--bg);
+    overflow: hidden;
+    position: relative;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* Section label chip */
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: var(--green);
+    text-transform: uppercase;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .kicker::before {
+    content: "";
+    width: 26px; height: 2px;
+    background: var(--green);
+    display: inline-block;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* =================== TOP : REVIEWS =================== */
+  .reviews {
+    padding: 70px 44px 64px;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, #15201a 0%, #0a0a0a 60%);
+    text-align: center;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .reviews .head {
+    margin-bottom: 34px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .reviews .head h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-top: 16px;
+    letter-spacing: -0.02em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .reviews .head h2 .g { color: var(--green); }
+  .reviews .head p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 500;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  .collage {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    text-align: left;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .col { display: flex; flex-direction: column; gap: 16px; flex: 1; min-width: 0; }
+
+  .shot {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background: #1b1b1b;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* ---- soft haze applied to ALL photos so they melt into the dark page ---- */
+  .shot,
+  .wall .cell img,
+  .tcard img,
+  .acard img,
+  .cert-img img {
+    filter: saturate(0.94) brightness(0.95) contrast(1.03);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* =================== TRANSFORMATIONS (before / after) =================== */
+  .transform-block { margin-top: 30px; }
+  .transform-block .sub-label {
+    text-align: center;
+    color: #c7cdca;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    letter-spacing: -0.01em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .transform-block .sub-label .g { color: var(--green); font-weight: 800; }
+  .transforms {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .tcard {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    background: #111;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .tcard img { width: 100%; display: block; }
+  .tcard::after {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg,
+      rgba(10,10,10,0.30) 0%, rgba(10,10,10,0) 20%,
+      rgba(10,10,10,0) 66%, rgba(10,10,10,0.62) 100%);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .tcard .tag {
+    position: absolute; left: 10px; bottom: 10px; z-index: 2;
+    font-size: 13px; font-weight: 700; color: #fff;
+    background: rgba(0,0,0,0.45); backdrop-filter: blur(4px);
+    padding: 4px 10px; border-radius: 6px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* =================== ATHLETE COACHING =================== */
+  .athlete {
+    padding: 80px 44px 84px;
+    background: radial-gradient(ellipse 95% 60% at 50% 42%, #15120c 0%, #070707 66%);
+    text-align: center;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .athlete .head { margin-bottom: 38px; }
+  .athlete .head h2 {
+    font-size: 44px; font-weight: 800; line-height: 1.3;
+    margin-top: 16px; letter-spacing: -0.02em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .athlete .head h2 .g { color: var(--green); }
+  .athlete-imgs { display: flex; gap: 16px; margin-bottom: 50px; }
+  .athlete-imgs .acard {
+    flex: 1; position: relative; min-width: 0;
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--card-border); background: #111;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .athlete-imgs .acard img { width: 100%; display: block; }
+  .athlete-imgs .acard::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg,
+      rgba(8,8,8,0.32) 0%, rgba(8,8,8,0) 24%,
+      rgba(8,8,8,0) 60%, rgba(8,8,8,0.82) 100%);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .athlete-imgs .acard .tag {
+    position: absolute; left: 16px; bottom: 16px; z-index: 2; text-align: left;
+    font-size: 17px; font-weight: 800; color: #fff; letter-spacing: -0.01em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .athlete-imgs .acard .tag span {
+    display: block; font-size: 12px; font-weight: 700;
+    color: var(--green); letter-spacing: 0.2em; margin-bottom: 4px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .athlete .punch {
+    font-size: 54px; font-weight: 800; line-height: 1.34; letter-spacing: -0.03em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .athlete .punch .g { color: var(--green); }
+  .athlete .punch-sub {
+    margin-top: 24px; font-size: 20px; color: var(--muted);
+    font-weight: 500; line-height: 1.6;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* =================== MIDDLE : CTA COPY =================== */
+  .cta {
+    padding: 78px 44px 84px;
+    text-align: center;
+    background:
+      linear-gradient(180deg, #0a0a0a 0%, #0d100e 50%, #0a0a0a 100%);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  .hl-line {
+    display: inline-block;
+    font-size: 33px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.7;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .hl-line .mark {
+    background: var(--green);
+    color: #06140b;
+    padding: 4px 12px;
+    border-radius: 4px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  .cta .big {
+    margin-top: 46px;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.32;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .cta .big .g {
+    color: var(--green);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .cta .sub {
+    margin-top: 22px;
+    font-size: 20px;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* =================== BOTTOM : CONTENT + CERT =================== */
+  .proof {
+    padding: 70px 44px 80px;
+    background: #070707;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .proof .head {
+    text-align: center;
+    margin-bottom: 40px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .proof .head h2 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.32;
+    margin-top: 16px;
+    letter-spacing: -0.02em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .proof .head h2 .g { color: var(--green); }
+
+  /* content wall — three screenshot grids side by side */
+  .wall {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 56px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .wall .cell {
+    flex: 1;
+    height: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    position: relative;
+    background: #111;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .wall .cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  /* fade bottom so the crop feels intentional */
+  .wall .cell::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 90px;
+    background: linear-gradient(180deg, rgba(7,7,7,0), rgba(7,7,7,0.92));
+    pointer-events: none;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* certificate row */
+  .cert-row {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    background: var(--panel);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 36px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .cert-row .cert-img {
+    width: 360px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.55);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .cert-row .cert-img img { width: 100%; display: block; }
+  .cert-row .cert-info { flex: 1; }
+  .cert-row .badge {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: #06140b;
+    background: var(--green);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .cert-row .cert-info h3 {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.34;
+    letter-spacing: -0.02em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .cert-row .cert-info h3 .g { color: var(--green); }
+  .cert-row .cert-info ul {
+    margin-top: 22px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .cert-row .cert-info li {
+    font-size: 19px;
+    color: #d6dad8;
+    font-weight: 500;
+    padding-left: 26px;
+    position: relative;
+    line-height: 1.45;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .cert-row .cert-info li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 9px;
+    width: 12px; height: 12px;
+    border-radius: 3px;
+    background: var(--green);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* =================== CLOSING : MY STORY =================== */
+  .story {
+    padding: 96px 44px 90px;
+    background:
+      radial-gradient(ellipse 90% 40% at 50% 0%, #11160f 0%, #060606 58%);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .story .head { text-align: center; margin-bottom: 56px; }
+  .story .head h2 {
+    font-size: 50px; font-weight: 800; line-height: 1.34;
+    margin-top: 18px; letter-spacing: -0.025em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .story .head h2 .g { color: var(--green); }
+
+  /* narrow reading column */
+  .read { max-width: 640px; margin: 0 auto; }
+  .read p {
+    font-size: 22px; line-height: 1.78; color: #d7dbd9;
+    font-weight: 500; letter-spacing: -0.01em;
+    text-wrap: pretty;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .read p + p { margin-top: 26px; }
+  .read .beat { margin-top: 6px; }            /* tight staccato lines */
+  .read .beat + .beat { margin-top: 6px; }
+  .read b, .read strong { color: #ffffff; font-weight: 800; }
+  .read .g { color: var(--green); font-weight: 700; }
+
+  /* big emotional pull-quote */
+  .pull {
+    max-width: 760px; margin: 56px auto;
+    text-align: center;
+    font-size: 38px; font-weight: 800; line-height: 1.45;
+    letter-spacing: -0.025em; color: #ffffff;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .pull .g { color: var(--green); }
+  .pull.lg { font-size: 46px; }
+
+  /* the 4-source credential card */
+  .sources {
+    max-width: 700px; margin: 40px auto 0;
+    background: var(--panel);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 38px 40px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .sources .lead {
+    font-size: 16px; font-weight: 700; letter-spacing: 0.22em;
+    color: var(--green); margin-bottom: 24px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .sources ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+  .sources li {
+    font-size: 20px; color: #e3e7e5; font-weight: 600;
+    padding-left: 38px; position: relative; line-height: 1.5;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .sources li .n {
+    position: absolute; left: 0; top: 1px;
+    width: 26px; height: 26px; border-radius: 7px;
+    background: var(--green); color: #06140b;
+    font-size: 14px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .sources li small {
+    display: block; font-size: 15px; color: var(--muted);
+    font-weight: 500; margin-top: 4px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* image breakouts inside the story */
+  .story-imgs { max-width: 880px; margin: 60px auto 0; }
+  .story-imgs.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+  .story-imgs.solo .frame { max-width: 460px; margin: 0 auto; }
+  .story-imgs.solo.sq .frame { max-width: 740px; }
+  .frame {
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--card-border);
+    background: #111; box-shadow: 0 14px 38px rgba(0,0,0,0.55);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .frame img { width: 100%; display: block; }
+  .story-imgs .cap {
+    text-align: center; margin-top: 20px;
+    font-size: 17px; color: var(--muted); font-weight: 600;
+    letter-spacing: -0.01em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .story-imgs .cap .g { color: var(--green); font-weight: 700; }
+
+  /* current-body gallery (mismatched ratios → contain on dark) */
+  .now-grid { display: grid; grid-template-columns: 0.78fr 1fr; gap: 16px; align-items: stretch; }
+  .now-grid .frame { display: flex; }
+  .now-grid .frame img { object-fit: cover; object-position: top center; }
+
+  /* thank-you screenshots */
+  .thanks { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; align-items: center; }
+  .thanks .frame.portrait { max-width: 400px; width: 100%; }
+  .thanks .frame.wide { max-width: 640px; width: 100%; }
+
+  /* soft haze on story photos to match the rest of the page */
+  .frame img { filter: saturate(0.96) brightness(0.96) contrast(1.02); }
+
+  /* divider rule between story beats */
+  .story-rule {
+    max-width: 640px; margin: 64px auto;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* =================== FINAL CTA =================== */
+  .finalcta {
+    padding: 90px 44px 96px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 80% 56% at 50% 50%, #16271c 0%, #070707 64%);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .finalcta .lead-q {
+    max-width: 720px; margin: 0 auto 30px;
+    font-size: 26px; font-weight: 600; line-height: 1.6;
+    color: #cfd4d2; letter-spacing: -0.01em;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .finalcta .lead-q .g { color: var(--green); font-weight: 800; }
+  .finalcta .title {
+    font-size: 58px; font-weight: 800; line-height: 1.3;
+    letter-spacing: -0.03em; color: #fff;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .finalcta .title .g { color: var(--green); }
+
+  /* what you get — placeholder card for the user to fill */
+  .offer {
+    max-width: 720px; margin: 52px auto 0;
+    background: var(--panel);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: left;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .badge {
+    display: inline-block; font-size: 14px; font-weight: 800;
+    letter-spacing: 0.16em; color: #06140b; background: var(--green);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer h3 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
+  .offer .offer-list { margin-top: 24px; display: flex; flex-direction: column; gap: 14px; }
+  .offer .offer-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 20px; font-weight: 600; color: #dfe3e1; line-height: 1.5;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .offer-item::before {
+    content: "✓"; flex-shrink: 0;
+    width: 28px; height: 28px; border-radius: 8px;
+    background: rgba(31,255,115,0.14); color: var(--green);
+    font-size: 16px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .ph {
+    margin-top: 8px; padding: 22px;
+    border: 1px dashed rgba(31,255,115,0.4); border-radius: 12px;
+    color: var(--muted); font-size: 16px; font-weight: 600; line-height: 1.6;
+    background: rgba(31,255,115,0.04);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .ph b { color: var(--green); }
+
+  /* offer groups (filled) */
+  .offer .group { padding: 22px 0; border-top: 1px solid rgba(255,255,255,0.08); }
+  .offer .group:first-of-type { border-top: none; padding-top: 4px; }
+  .offer .group .gtitle {
+    display: flex; gap: 14px; align-items: flex-start;
+    font-size: 22px; font-weight: 800; color: #fff;
+    letter-spacing: -0.01em; line-height: 1.4;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .group .gtitle .gn {
+    flex-shrink: 0; width: 30px; height: 30px; border-radius: 8px;
+    background: var(--green); color: #06140b; font-size: 15px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .group .gtitle .free {
+    display: inline-block; margin-left: 8px; font-size: 14px; font-weight: 800;
+    color: var(--green); background: rgba(31,255,115,0.12);
+    padding: 2px 9px; border-radius: 6px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .group .gtitle .opt {
+    display: inline-block; margin-left: 8px; font-size: 13px; font-weight: 700;
+    color: var(--muted); background: rgba(255,255,255,0.06);
+    padding: 2px 9px; border-radius: 6px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .group .strike { color: var(--muted); text-decoration: line-through; font-weight: 700; }
+  .offer .sub {
+    margin: 14px 0 0 44px; list-style: none;
+    display: flex; flex-direction: column; gap: 10px;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .sub li {
+    position: relative; padding-left: 22px;
+    font-size: 17px; font-weight: 500; color: #cfd4d2; line-height: 1.5;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .offer .sub li::before {
+    content: ""; position: absolute; left: 0; top: 9px;
+    width: 7px; height: 7px; border-radius: 2px; background: var(--green);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* apply button */
+  .apply-wrap { margin-top: 40px; }
+  .apply-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+    min-width: 460px; padding: 26px 48px;
+    background: var(--green); color: #06140b;
+    font-size: 27px; font-weight: 800; letter-spacing: -0.01em;
+    border-radius: 14px; text-decoration: none;
+    box-shadow: 0 14px 40px rgba(31,255,115,0.28);
+    transition: transform .15s ease, box-shadow .15s ease;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .apply-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 48px rgba(31,255,115,0.42); }
+  .apply-btn .arrow { font-size: 24px; }
+  .apply-note { margin-top: 16px; font-size: 15px; color: var(--muted); font-weight: 500; }
+
+  .finalcta .closer {
+    margin-top: 56px;
+    font-size: 30px; font-weight: 800; line-height: 1.5;
+    letter-spacing: -0.02em; color: #fff;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .finalcta .closer .g { color: var(--green); }
+  .finalcta .closer small {
+    display: block; margin-top: 14px;
+    font-size: 18px; font-weight: 500; color: var(--muted);
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+  /* bottom brand footer */
+  .footer {
+    text-align: center;
+    padding: 40px 0 8px;
+    color: var(--muted);
+    font-size: 15px;
+    letter-spacing: 0.4em;
+    font-weight: 700;
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+  .footer .b { color: var(--green); }
+
+  /* =================== MOBILE RESPONSIVE =================== */
+  @media (max-width: 768px) {
+
+    body { padding: 0; }
+    .page { width: 100%; }
+
+    /* 단어 중간 줄바꿈 방지 */
+    * { word-break: keep-all; overflow-wrap: break-word; }
+
+    /* 폰트 크기 축소 */
+    .reviews .head h2 { font-size: 26px !important; line-height: 1.4 !important; }
+    .athlete .head h2 { font-size: 26px !important; line-height: 1.4 !important; }
+    .story .head h2 { font-size: 26px !important; line-height: 1.4 !important; }
+    .cta .big { font-size: 28px !important; line-height: 1.4 !important; }
+    .athlete .punch { font-size: 26px !important; line-height: 1.4 !important; }
+    .pull { font-size: 22px !important; line-height: 1.5 !important; }
+    .pull.lg { font-size: 24px !important; }
+    .finalcta .title { font-size: 28px !important; line-height: 1.4 !important; }
+    .finalcta .lead-q { font-size: 17px !important; }
+    .read p { font-size: 16px !important; line-height: 1.8 !important; }
+    .hl-line { font-size: 20px !important; line-height: 1.6 !important; }
+    .hl-line .mark { padding: 2px 8px !important; }
+    .cert-row .cert-info h3 { font-size: 20px !important; }
+    .cert-row .cert-info li { font-size: 15px !important; }
+    .sources li { font-size: 15px !important; }
+    .offer h3 { font-size: 20px !important; }
+    .offer .group .gtitle { font-size: 17px !important; }
+    .offer .offer-item { font-size: 15px !important; }
+    .offer .sub li { font-size: 14px !important; }
+    .finalcta .closer { font-size: 20px !important; line-height: 1.6 !important; }
+    .athlete .punch-sub { font-size: 16px !important; }
+    .cta .sub { font-size: 16px !important; }
+    .kicker { font-size: 13px !important; }
+
+    /* 패딩 축소 */
+    .reviews { padding: 44px 20px 36px; }
+    .athlete { padding: 44px 20px 48px; }
+    .cta { padding: 44px 20px 48px; }
+    .proof { padding: 44px 20px 48px; }
+    .story { padding: 52px 20px 48px; }
+    .finalcta { padding: 52px 20px 56px; }
+
+    /* 후기 콜라주: 세로 스택 */
+    .collage { flex-direction: column; }
+    .col { width: 100%; }
+
+    /* 비포애프터: 2x2 그리드 유지 */
+    .transforms { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .tcard .tag { font-size: 11px; padding: 3px 8px; }
+
+    /* 선수 사진: 2열 그리드로 나란히 */
+    .athlete-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 28px; }
+    .athlete-imgs .acard .tag { font-size: 12px; left: 10px; bottom: 10px; }
+    .athlete-imgs .acard .tag span { font-size: 10px; }
+
+    /* 콘텐츠 월: 3열 유지, 높이만 줄임 */
+    .wall { gap: 8px; }
+    .wall .cell { height: 200px; }
+
+    /* 자격증: 세로 스택 */
+    .cert-row { flex-direction: column; gap: 20px; padding: 20px 16px; }
+    .cert-row .cert-img { width: 100%; }
+
+    /* 소스 카드 */
+    .sources { padding: 24px 20px; }
+    .sources li { font-size: 15px !important; padding-left: 32px; }
+
+    /* 스토리 이미지 - 2열 유지 */
+    .story-imgs.pair { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .story-imgs { margin-top: 28px; }
+    .now-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+
+    /* 신청 버튼 */
+    .apply-btn { min-width: unset; width: 100%; font-size: 22px !important; padding: 22px 20px; }
+
+    /* 오퍼 카드 */
+    .offer { padding: 22px 18px; }
+    .offer .sub { margin-left: 16px; }
+
+    /* pull quote & rule */
+    .pull { margin: 32px auto; }
+    .story-rule { margin: 36px auto; }
+
+    /* 스토리 캡션 */
+    .story-imgs .cap { font-size: 14px !important; }
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+
+    /* ── 특정 문장 한 줄 처리 ── */
+    /* 이미 수많은 분들이 혼자서 변화를 만들고 있습니다 */
+    .reviews .head h2 { font-size: 22px !important; }
+
+    /* 말이 아닌 결과로 증명합니다 — 직접 만든 변화 */
+    .transform-block .sub-label { font-size: 17px !important; }
+
+    /* 5배는 더 쉽습니다 */
+    .athlete .punch { font-size: 22px !important; }
+
+    /* 200명 이상 코칭으로 검증된 방법 */
+    .athlete .punch-sub { font-size: 14px !important; }
+
+    /* 거울 앞에 서는 게 가장 싫었습니다 */
+    .story .head h2 { font-size: 20px !important; }
+
+    /* 타고난 거라고, 나만의 시스템, 제 몸 위에서, 무엇을 해야, 나 자신을 사랑 등 본문 */
+    .read p[style*="29px"],
+    .read p[style*="32px"] { font-size: 17px !important; }
+    .read p { font-size: 17px !important; }
+
+    /* 5년 전 예쁘게 빠지지 않았던 몸 (캡션) */
+    .story-imgs .cap { font-size: 14px !important; }
+    .story-imgs .cap * { font-size: 14px !important; }
+
+    /* 다이어트 의지가 강한 사람입니다 */
+    .finalcta .lead-q { font-size: 15px !important; }
+
+    /* 피식푸드 -20kg 챌린지입니다 */
+    .pull { font-size: 19px !important; }
+    .pull.lg { font-size: 20px !important; }
+    .pull * { font-size: inherit !important; }
+
+    /* 진심으로 간절한 / 끝까지 책임지겠습니다 */
+    .finalcta .closer { font-size: 18px !important; line-height: 1.6 !important; }
+    .finalcta .closer small { font-size: 15px !important; }
+    .finalcta .closer * { font-size: inherit !important; }
+
+    /* inline style font-size 강제 오버라이드 */
+    .story .read p,
+    .story .read b,
+    .story .read span { font-size: 17px !important; }
+
+    /* CTA 타이틀 */
+    .finalcta .title { font-size: 24px !important; }
+    .finalcta .title * { font-size: inherit !important; }
+    .cta .big { font-size: 24px !important; }
+    .cta .big * { font-size: inherit !important; }
+
+    /* hl-line (강조 줄) */
+    .hl-line { font-size: 18px !important; display: block; }
+
+    /* 신청 버튼 */
+    .apply-btn { font-size: 20px !important; }
+
+
+    /* 인라인 폰트 클래스 모바일 오버라이드 */
+    .fs-h2 { font-size: 22px !important; }
+    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
+    .fs-cap { font-size: 14px !important; }
+    .fs-closer { font-size: 18px !important; }
+
+  }
+
+
+  /* 인라인 폰트 대체 클래스 - PC */
+  .fs-h2 { font-size: 60px; }
+  .fs-body { font-size: 29px; }
+  .fs-body-lg { font-size: 32px; }
+  .fs-cap { font-size: 30px; }
+  .fs-closer { font-size: 45px; }
+
+</style>
+</head>
+<body style="">
+
+<div class="page" data-screen-label="상세페이지">
+
+  <!-- ============ TOP : REVIEWS ============ -->
+  <section class="reviews">
+    <div class="head">
+      <span class="kicker">REAL DM &amp; 후기</span>
+      <h2 class="fs-h2">이미 수많은 분들이<br><span class="g" class="fs-h2">혼자서</span> 변화를 만들고 있습니다</h2>
+      <p style="">온라인 코칭, 피티 리얼 후기</p>
+    </div>
+
+    <div class="collage">
+      <!-- Left column: the tall food-log testimonial -->
+      <div class="col">
+        <img loading="lazy" class="shot" src="review-choonsik.webp" alt="후기 - 식단 기록">
+      </div>
+      <!-- Right column: stacked testimonials -->
+      <div class="col">
+        <img loading="lazy" class="shot" src="review-lion.webp" alt="후기 - 야식 생각이 줄었어요">
+        <img loading="lazy" class="shot" src="review-jordy.webp" alt="후기 - 3주 -4.1kg">
+        <img loading="lazy" class="shot" src="review-member.webp" alt="후기 - 진짜 최고">
+        <img loading="lazy" class="shot" src="review-pilates1.webp" alt="후기 - 자세 교정">
+        <img loading="lazy" class="shot" src="review-pilates2.webp" alt="후기 - 체형교정과 체지방감량">
+      </div>
+    </div>
+
+    <!-- Before / After transformations -->
+    <div class="transform-block">
+      <div class="sub-label">말이 아닌 <span class="g">결과</span>로 증명합니다 — 직접 만든 변화</div>
+      <div class="transforms">
+        <div class="tcard"><img loading="lazy" src="transform-1.webp" alt="비포 애프터 1"><div class="tag">BEFORE → AFTER</div></div>
+        <div class="tcard"><img loading="lazy" src="transform-2.webp" alt="비포 애프터 2"><div class="tag">BEFORE → AFTER</div></div>
+        <div class="tcard"><img loading="lazy" src="transform-4.webp" alt="비포 애프터 3"><div class="tag">BEFORE → AFTER</div></div>
+        <div class="tcard"><img loading="lazy" src="transform-3.webp" alt="비포 애프터 4"><div class="tag">BEFORE → AFTER</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ATHLETE COACHING ============ -->
+  <section class="athlete" data-screen-label="선수 코칭">
+    <div class="head">
+      <span class="kicker">PRO ATHLETE COACHING</span>
+      <h2 style="">무대에 서는 선수들도,<br><span class="g">같은 원리로 코칭합니다</span></h2>
+    </div>
+
+    <div class="athlete-imgs">
+      <div class="acard">
+        <img loading="lazy" src="athlete-1.webp" alt="선수 대회 코칭">
+        <div class="tag" style=""><span>CONTEST PREP</span>대회 컨디셔닝 코칭 1등 x 2</div>
+      </div>
+      <div class="acard">
+        <img loading="lazy" src="athlete-2.webp" alt="선수 대회 무대">
+        <div class="tag" style=""><span>NPCA STAGE</span>대회 입상</div>
+      </div>
+    </div>
+
+    <div class="punch" style=""><br>
+      그렇다면 일반인은? — <span class="g" style="">
+5배는 더 쉽습니다.</span>
+    </div>
+    <div class="punch-sub">
+      선수 대회 준비부터 일반인 온라인 영양 코칭까지 — 극한을 설계해 본 사람이 짜는 식단은 다릅니다.
+    </div>
+  </section>
+
+  <!-- ============ MIDDLE : CTA COPY ============ -->
+  <section class="cta">
+    <div class="hl-line">
+      <span class="mark">영양학 전공 + 스포츠영양코치 자격증 + 실제 100명 이상 코칭</span>
+    </div>
+
+    <div class="big">
+      <span class="g">6개월</span>, PT비용 <span class="g">200만원</span>의<br>
+      돈과 시간을 아껴드리겠습니다
+    </div>
+    <div class="sub">근거 기반 이론 + 직접 경험 + 200명 이상 코칭으로 검증된 방법</div>
+  </section>
+
+  <!-- ============ BOTTOM : CONTENT + CERT ============ -->
+  <section class="proof">
+    <div class="head">
+      <span class="kicker">CONTENT &amp; CERTIFICATE</span>
+      <h2>꾸준히 쌓아온 <span class="g">콘텐츠</span>,<br>그리고 검증된 <span class="g">자격</span></h2>
+    </div>
+
+    <div class="wall">
+      <div class="cell"><img loading="lazy" src="content-1.webp" alt="콘텐츠 1"></div>
+      <div class="cell"><img loading="lazy" src="content-2.webp" alt="콘텐츠 2"></div>
+      <div class="cell"><img loading="lazy" src="content-3.webp" alt="콘텐츠 3"></div>
+    </div>
+
+    <div class="cert-row">
+      <div class="cert-img">
+        <img loading="lazy" src="cert-nsca.webp" alt="NSCA KOREA Advanced Sport Nutrition Coach 자격증">
+      </div>
+      <div class="cert-info">
+        <span class="badge">NSCA KOREA · OFFICIAL</span>
+        <h3>스포츠영양코치 <span class="g">자격증</span><br>그리고 <span class="g">영양학/체육학 전공</span></h3>
+        <ul>
+          <li>NSCA KOREA 공인 Advanced Sport Nutrition Coach</li>
+          <li style="">상명대(서울) 영양학 전공 기반의 근거 있는 식단 설계</li>
+          <li>실제 100명 이상 1:1 코칭 경험</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ CLOSING : MY STORY ============ -->
+  <section class="story" data-screen-label="나의 이야기">
+    <div class="head">
+      <span class="kicker">MY STORY · 나의 이야기</span>
+      <h2>한때 저는,
+거울 앞에 서는 게 가장 싫었습니다</h2>
+    </div>
+
+    <div class="read" class="fs-body">
+      <p class="beat" class="fs-body">고등학교 내내 따라다닌 별명이 있었습니다.</p>
+      <p class="beat" class="fs-body">입에 담기도 민망한, 그런 별명.</p>
+      <p class="beat" class="fs-body">거울 앞에 서는 게 싫었고, 사진 찍히는 게 두려웠습니다.</p>
+      <p style="margin-top: 26px;" class="fs-body">그냥 <b class="fs-body">타고난 거라고 생각했습니다.</b><br>'뚱뚱한 유전자, 어쩔 수 없다'고.</p>
+    </div>
+
+    <!-- school-era before -->
+    <div class="story-imgs solo">
+      <div class="frame"><img loading="lazy" src="story-school.webp" alt="학창 시절 비포"></div>
+    </div>
+
+    <div class="pull">하지만 무언가는 달라져야 했습니다.<br>그래서 <span class="g">발악했습니다.</span></div>
+
+    <div class="read" class="fs-body">
+      <p class="beat" class="fs-body">닭가슴살만 먹었습니다.</p>
+      <p class="beat" class="fs-body">매일 운동했습니다.</p>
+      <p class="beat" class="fs-body">굶었습니다.</p>
+      <p class="beat" class="fs-body">그렇게 꼬박 1년을 버텼습니다.</p>
+      <p style="margin-top: 26px;" class="fs-body">결과는? <b class="fs-body">겨우 15kg 빠진 95kg.</b><br>더 끔찍한 건, 그마저도 오래가지 못했다는 겁니다.</p>
+    </div>
+
+    <div class="pull">살이 문제가 아니라,<br><span class="g">'방법'이 잘못됐다</span>는 걸 그제야 알았습니다.</div>
+
+    <!-- 2-year starvation diet result -->
+    <div class="story-imgs solo">
+      <div class="frame"><img loading="lazy" src="story-2yr.webp" alt="굶어서 다이어트한 몸"></div>
+      <div class="cap" class="fs-cap">굶어서 2년 다이어트 했을 때 — <span class="g" class="fs-cap">5년 전 예쁘게 빠지지 않았던 몸</span><div><br></div></div>
+    </div>
+
+    <div class="read" class="fs-body">
+      <p class="beat" class="fs-body"><div><br></div>
+
+영양 세미나를 찾아다녔습니다.</p>
+      <p class="beat" class="fs-body">다이어트 상담을 받았습니다.</p>
+      <p class="beat" class="fs-body">식품영양학과 교수님 연구실 문까지 두드렸습니다.</p>
+      <p style="margin-top: 26px;" class="fs-body">그리고 전공서적과 스포츠영양학을 파고들며,<br>몇 년에 걸쳐 다이어트 지식을 제대로 쌓아 나갔습니다.</p>
+    </div>
+
+    <!-- 4-source credential -->
+    <div class="sources">
+      <div class="lead">내 식단이 다른 이유 — 4가지의 결합</div>
+      <ul>
+        <li><span class="n">1</span>식품영양학 · 스포츠건강관리학 <b>전공 지식</b></li>
+        <li><span class="n">2</span>미국체력관리협회(NSCA) <b>상급 스포츠영양코치 자격</b><small>검증된 근거로만 설계합니다.</small></li>
+        <li><span class="n">3</span>교수 · 세미나 · 논문에서 뽑아낸 <b>실제 데이터</b></li>
+        <li><span class="n">4</span>내 몸으로 직접 검증한 <b>현장 경험</b></li>
+      </ul>
+    </div>
+
+    <div class="read" style="margin-top:40px;">
+      <p class="fs-body">이 네 가지를 합쳐 <b class="fs-body">'나만의 시스템'</b>을 만들었습니다.<br>그리고 그 시스템은, 가장 먼저 <span class="g" class="fs-body">제 몸</span> 위에서 증명됐습니다.</p>
+    </div>
+
+    <!-- before / after proof -->
+    <div class="story-imgs pair">
+      <div class="frame"><img loading="lazy" src="story-ba-1.webp" alt="비포 애프터 1"></div>
+      <div class="frame"><img loading="lazy" src="story-ba-2.webp" alt="비포 애프터 2"></div>
+    </div>
+    <div class="story-imgs"><div class="cap">타고난 게 아니었습니다. <span class="g">방법의 차이</span>였을 뿐입니다.</div></div>
+
+    <div class="story-rule"></div>
+
+    <div class="read" class="fs-body">
+      <p class="fs-body">이제는 당신이 <b class="fs-body">무엇을 해야 하는지</b> 알려주고,<br>그것을 끝까지 <span class="g" class="fs-body">관리</span>해 드릴 차례입니다.</p>
+      <p class="fs-body">지켜야 할 것만 지키면 다이어트는 실패할 수가 없고,<br><b class="fs-body">요요</b>까지 확실하게 막을 수 있습니다.</p>
+    </div>
+
+    <!-- current body -->
+    <div class="story-imgs">
+      <div class="now-grid">
+        <div class="frame"><img loading="lazy" src="story-now-1.webp" alt="현재 몸 - 프론트"></div>
+        <div class="frame"><img loading="lazy" src="story-now-2.webp" alt="현재 몸 - 백"></div>
+      </div>
+      <div class="cap">유전이 아니라, <span class="g">시스템의 결과</span>입니다.</div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING : WHY YOU NEED COACHING (유도글) ============ -->
+  <section class="story" data-screen-label="유도글" style="padding-top:36px;background:#060606;">
+    <div class="read" class="fs-body-lg">
+      <p class="fs-body-lg">여기까지 읽으셨다면,<br>당신은 이미 <b class="fs-body-lg">다이어트 의지가 강한 사람</b>입니다.</p>
+      <p class="fs-body-lg">하지만 당신도 느꼈을 겁니다.<br>혼자 시작한 다이어트는 <span class="g" class="fs-body-lg">결국 실패한다</span>는 사실을.</p>
+      <p class="beat" style="margin-top: 26px; font-size: 32px;">운동은 하다가 말 것이고,</p>
+      <p class="beat" class="fs-body-lg">식단은 귀찮아 닭가슴살만 먹다&nbsp;<div style="">결국 폭식으로 이어지고,</div></p>
+      <p class="beat" class="fs-body-lg">한 달 꾸준하던 헬스장도,&nbsp;<div>어느 순간 발길이 끊깁니다.</div></p>
+    </div>
+
+    <div class="pull lg">결국 다이어트는<br><span class="g">'관리'가 전부</span>입니다.</div>
+
+    <!-- actual management files -->
+    <div class="story-imgs solo sq">
+      <div class="frame"><img loading="lazy" src="manage-files.webp" alt="피식푸드 관리 파일·자료"></div>
+      <div class="cap">실제로 관리되는 <span class="g">피식푸드만의 파일과 정보들</span></div>
+    </div>
+
+    <div class="read">
+      <p style="text-align: center; font-size: 32px">
+
+아무리 지식이 많아도,
+관리가 안 되면 실패입니다.</p>
+    </div>
+
+    <div class="story-rule"></div>
+
+    <div class="read" class="fs-body">
+      <p class="fs-body">제 인생에서 가장 큰 터닝포인트는, <span class="g" class="fs-body">다이어트</span>였습니다.</p>
+      <p class="fs-body">살을 빼고 나니 자존감이 올라갔고,<br>사람들과 더 많이 어울릴 수 있었고,<br>무엇보다 <b class="fs-body">나 자신을 사랑하게 됐습니다.</b></p>
+      <p class="fs-body">헬스트레이너로 지인들의 다이어트를 코칭하면서<br>"덕분에 인생이 바뀌었다"는 말을 들을 때마다,<br>말로 다 못 할 <span class="g" class="fs-body">뿌듯함</span>을 느꼈습니다.</p>
+    </div>
+
+    <!-- thank-you messages -->
+    <div class="story-imgs">
+      <div class="thanks">
+        <div class="frame wide"><img loading="lazy" src="thanks-2.webp" alt="회원 감사 메세지 1"></div>
+        <div class="frame portrait"><img loading="lazy" src="thanks-1.webp" alt="회원 감사 메세지 2"></div>
+      </div>
+      <div class="cap">실제 회원님들이 보내주신 <span class="g">감사 메세지</span></div>
+    </div>
+
+    <div class="read" style="margin-top:60px;">
+      <p style="font-size: 40px;">그러다 문득, 이런 생각이 들었습니다.</p>
+    </div>
+    <div class="pull">"지금 내 지식으로 <span class="g">1:1 밀착 관리</span>를 해준다면,<br>얼마나 많은 인생을 바꿀 수 있을까?"</div>
+    <div class="read">
+      <p style="text-align: center;" class="fs-body-lg">그 질문 하나에서 시작된 것이,<br>바로 <b class="fs-body-lg">피식푸드 −20kg 챌린지</b>입니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="finalcta" data-screen-label="최종 신청">
+    <p class="lead-q" style="font-size: 26px;">의지는 강했지만, 늘 <span class="g">'관리'</span>에서 무너졌던 당신.<br>이제, 더 이상 혼자가 아닙니다.</p>
+    <div class="title">피식푸드 챌린지에 참여하면,<br><span class="g">이번엔 성공합니다.</span></div>
+
+    <div class="offer">
+      <span class="badge">WHAT YOU GET · 제공 혜택</span>
+      <h3 style="">당신을 위한 1:1 밀착 관리
+
+<div><br></div></h3>
+
+      <div class="group">
+        <div class="gtitle"><span class="gn">1</span><div>피식푸드 <span class="strike">정가 4만원</span> '나홀로 다이어트 전자책'<span class="free">무료 제공</span></div></div>
+        <ul class="sub" style="font-size: 25px;">
+          <li style="font-size: 25px;">다이어트 기록 프로그램</li>
+          <li style="font-size: 25px;">30가지 식단 레시피 제공</li>
+          <li style="font-size: 25px;">유지 칼로리 자동화 웹사이트</li>
+          <li style="font-size: 25px;">근력 · 유산소 운동 루틴 파일 제공</li>
+          <li style="font-size: 25px;">내돈내산 직접 먹어본 다이어트 추천템 링크 제공</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="gtitle"><span class="gn">2</span><div>영양 · 식단 <b style="color:var(--green);">밀착 관리</b></div></div>
+        <ul class="sub" style="font-size: 25px;">
+          <li style="font-size: 25px;">주기적 밀착 줌(ZOOM) 상담</li>
+          <li style="font-size: 25px;">매주 식단 · 컨디션 · 운동 피드백</li>
+          <li style="font-size: 25px;">다이어트 세일템 추천</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="gtitle"><span class="gn">3</span><div>운동 자세 및 루틴 피드백<span class="opt">선택 사항</span></div></div>
+      </div>
+
+      <div class="group">
+        <div class="gtitle"><span class="gn">4</span><div>다이어트 <b style="color:var(--green);">습관 형성</b> · 요요 방지 식단 설계</div></div>
+      </div>
+    </div>
+
+    <div class="closer" class="fs-closer">
+      <span class="g" class="fs-closer">진심으로 간절한 분들만</span> 신청해 주세요.
+      <small class="fs-closer">딱 그만큼의 변화를, 끝까지 책임지겠습니다.</small>
+    </div>
+
+    <div class="apply-wrap">
+      <a class="apply-btn" href="https://naver.me/5xgN6acb" target="_blank" rel="noopener" style="font-size: 64px;">다이어트 프로그램 신청하기 <span class="arrow" style="font-size: 64px;">→</span></a>
+      <div class="apply-note">* 버튼을 누르면 신청 폼으로 이동합니다.</div>
+    </div>
+
+    <div class="footer">BY&nbsp;&nbsp;<span class="b">PSICKFOOD</span></div>
+  </section>
+
+</div>
+
+
+
+</body></html>
