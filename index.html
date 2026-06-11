@@ -3,6 +3,10 @@
 
 
 
+
+
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>피식푸드 — 전자책 상세페이지</title>
@@ -19,12 +23,6 @@
     --muted: #8a9090;
     --card-border: rgba(255,255,255,0.10);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -34,12 +32,6 @@
     -webkit-font-smoothing: antialiased;
     color: var(--ink);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -48,12 +40,6 @@
     justify-content: center;
     padding: 40px 0;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -64,12 +50,6 @@
     overflow: hidden;
     position: relative;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -84,12 +64,6 @@
     color: var(--green);
     text-transform: uppercase;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .kicker::before {
@@ -98,13 +72,105 @@
     background: var(--green);
     display: inline-block;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
+  }
+
+  /* =================== HERO : 고도비만 전문 =================== */
+  .hero {
+    padding: 88px 44px 76px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% 0%, #11271a 0%, #0a0a0a 60%);
+    border-bottom: 1px solid var(--card-border);
+  }
+  .hero .spec-strong {
+    display: inline-block;
+    font-size: 30px; font-weight: 800; letter-spacing: -0.01em;
+    color: var(--green);
+    padding: 4px 0 14px;
+  }
+  .hero .tag-spec {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 17px; font-weight: 800; letter-spacing: 0.04em;
+    color: #06140b; background: var(--green);
+    padding: 9px 18px; border-radius: 999px;
+  }
+  .hero h1 {
+    margin-top: 26px;
+    font-size: 58px; font-weight: 800; line-height: 1.28;
+    letter-spacing: -0.03em; color: #fff;
+    text-wrap: balance;
+  }
+  .hero h1 .g { color: var(--green); }
+  .hero h1 .glow {
+    color: var(--green);
+  }
+  .hero .reco {
+    max-width: 760px; margin: 30px auto 0;
+    font-size: 24px; font-weight: 600; line-height: 1.72;
+    color: #d7dbd9; letter-spacing: -0.01em;
+    text-wrap: pretty;
+  }
+  .hero .reco b { color: #fff; font-weight: 800; }
+  .hero .reco .g { color: var(--green); font-weight: 800; }
+
+  /* why-different emphasis band */
+  .hero .why {
+    max-width: 680px; margin: 40px auto 0;
+    background: var(--panel);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 32px 34px;
+    text-align: left;
+  }
+  .hero .why .lead {
+    font-size: 15px; font-weight: 800; letter-spacing: 0.18em;
+    color: var(--green); margin-bottom: 16px;
+  }
+  .hero .why p {
+    font-size: 22px; font-weight: 600; line-height: 1.7;
+    color: #e3e7e5; letter-spacing: -0.01em; text-wrap: pretty;
+  }
+  .hero .why p .g { color: var(--green); font-weight: 800; }
+  .hero .why .warn {
+    margin-top: 16px; padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 22px; font-weight: 800; color: #fff; line-height: 1.6;
+  }
+  .hero .why .warn .g { color: var(--green); }
+  .hero .why .focus {
+    margin-top: 22px;
+    font-size: 23px; font-weight: 800; color: #fff; line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+  .hero .why .focus .g { color: var(--green); }
+  .hero .why .focus-sub {
+    margin-top: 10px;
+    font-size: 20px; font-weight: 600; color: #c8ccca; line-height: 1.65;
+    letter-spacing: -0.01em;
+  }
+  .hero .why .focus-sub b { color: var(--green); font-weight: 800; }
+  .hero .why .why-img {
+    margin-top: 22px; border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--card-border); background: #0d0f0e;
+  }
+  .hero .why .why-img img { width: 100%; display: block; }
+  .hero .why .why-img.ba { margin-top: 24px; }
+  .hero .why .focus[style] { margin-top: 22px; font-size: 26px; }
+  .hero .why .why-cap {
+    margin-top: 14px; text-align: center;
+    font-size: 19px; font-weight: 700; color: var(--muted); letter-spacing: -0.01em;
+  }
+  .hero .why .why-cap .g { color: var(--green); font-weight: 800; }
+
+  /* ebook cover beside benefit list */
+  .offer .ebook-row { display: flex; gap: 26px; align-items: center; margin-top: 16px; }
+  .offer .ebook-row .sub { margin: 0; flex: 1; }
+  .offer .ebook-cover { flex: 0 0 auto; width: 220px; }
+  .offer .ebook-cover img {
+    width: 100%; display: block; border-radius: 10px;
+    box-shadow: 0 18px 44px rgba(0,0,0,0.55);
+    border: 1px solid var(--card-border);
   }
 
   /* =================== TOP : REVIEWS =================== */
@@ -114,23 +180,11 @@
       radial-gradient(ellipse 80% 50% at 50% 0%, #15201a 0%, #0a0a0a 60%);
     text-align: center;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .reviews .head {
     margin-bottom: 34px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .reviews .head h2 {
@@ -140,12 +194,6 @@
     margin-top: 16px;
     letter-spacing: -0.02em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .reviews .head h2 .g { color: var(--green); }
@@ -155,12 +203,6 @@
     font-size: 18px;
     font-weight: 500;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -170,12 +212,6 @@
     align-items: flex-start;
     text-align: left;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .col { display: flex; flex-direction: column; gap: 16px; flex: 1; min-width: 0; }
@@ -188,12 +224,6 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     background: #1b1b1b;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -205,12 +235,6 @@
   .cert-img img {
     filter: saturate(0.94) brightness(0.95) contrast(1.03);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -224,44 +248,28 @@
     margin-bottom: 22px;
     letter-spacing: -0.01em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .transform-block .sub-label .g { color: var(--green); font-weight: 800; }
   .transforms {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 14px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .tcard {
     position: relative;
+    flex: 0 1 calc((100% - 56px) / 5);
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--card-border);
     background: #111;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
-  .tcard img { width: 100%; display: block; }
+  .tcard img { width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
   .tcard::after {
     content: "";
     position: absolute; inset: 0; pointer-events: none;
@@ -269,12 +277,6 @@
       rgba(10,10,10,0.30) 0%, rgba(10,10,10,0) 20%,
       rgba(10,10,10,0) 66%, rgba(10,10,10,0.62) 100%);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .tcard .tag {
@@ -283,12 +285,6 @@
     background: rgba(0,0,0,0.45); backdrop-filter: blur(4px);
     padding: 4px 10px; border-radius: 6px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -298,12 +294,6 @@
     background: radial-gradient(ellipse 95% 60% at 50% 42%, #15120c 0%, #070707 66%);
     text-align: center;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .athlete .head { margin-bottom: 38px; }
@@ -311,12 +301,6 @@
     font-size: 44px; font-weight: 800; line-height: 1.3;
     margin-top: 16px; letter-spacing: -0.02em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .athlete .head h2 .g { color: var(--green); }
@@ -326,12 +310,6 @@
     border-radius: 14px; overflow: hidden;
     border: 1px solid var(--card-border); background: #111;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .athlete-imgs .acard img { width: 100%; display: block; }
@@ -341,47 +319,23 @@
       rgba(8,8,8,0.32) 0%, rgba(8,8,8,0) 24%,
       rgba(8,8,8,0) 60%, rgba(8,8,8,0.82) 100%);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .athlete-imgs .acard .tag {
     position: absolute; left: 16px; bottom: 16px; z-index: 2; text-align: left;
     font-size: 17px; font-weight: 800; color: #fff; letter-spacing: -0.01em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .athlete-imgs .acard .tag span {
     display: block; font-size: 12px; font-weight: 700;
     color: var(--green); letter-spacing: 0.2em; margin-bottom: 4px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .athlete .punch {
     font-size: 54px; font-weight: 800; line-height: 1.34; letter-spacing: -0.03em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .athlete .punch .g { color: var(--green); }
@@ -389,12 +343,6 @@
     margin-top: 24px; font-size: 20px; color: var(--muted);
     font-weight: 500; line-height: 1.6;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -405,12 +353,6 @@
     background:
       linear-gradient(180deg, #0a0a0a 0%, #0d100e 50%, #0a0a0a 100%);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -421,12 +363,6 @@
     letter-spacing: -0.01em;
     line-height: 1.7;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .hl-line .mark {
@@ -437,12 +373,6 @@
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -454,23 +384,11 @@
     letter-spacing: -0.03em;
     color: #ffffff;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .cta .big .g {
     color: var(--green);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .cta .sub {
@@ -480,12 +398,6 @@
     font-weight: 500;
     letter-spacing: 0.01em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -494,24 +406,12 @@
     padding: 70px 44px 80px;
     background: #070707;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .proof .head {
     text-align: center;
     margin-bottom: 40px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .proof .head h2 {
@@ -521,12 +421,6 @@
     margin-top: 16px;
     letter-spacing: -0.02em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .proof .head h2 .g { color: var(--green); }
@@ -537,12 +431,6 @@
     gap: 12px;
     margin-bottom: 56px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .wall .cell {
@@ -554,12 +442,6 @@
     position: relative;
     background: #111;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .wall .cell img {
@@ -569,12 +451,6 @@
     object-position: top center;
     display: block;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   /* fade bottom so the crop feels intentional */
@@ -586,12 +462,6 @@
     background: linear-gradient(180deg, rgba(7,7,7,0), rgba(7,7,7,0.92));
     pointer-events: none;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -605,12 +475,6 @@
     border-radius: 18px;
     padding: 36px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .cert-row .cert-img {
@@ -621,12 +485,6 @@
     border: 1px solid var(--card-border);
     box-shadow: 0 14px 36px rgba(0,0,0,0.55);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .cert-row .cert-img img { width: 100%; display: block; }
@@ -642,12 +500,6 @@
     border-radius: 999px;
     margin-bottom: 20px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .cert-row .cert-info h3 {
@@ -656,12 +508,6 @@
     line-height: 1.34;
     letter-spacing: -0.02em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .cert-row .cert-info h3 .g { color: var(--green); }
@@ -672,12 +518,6 @@
     flex-direction: column;
     gap: 12px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .cert-row .cert-info li {
@@ -688,12 +528,6 @@
     position: relative;
     line-height: 1.45;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .cert-row .cert-info li::before {
@@ -704,12 +538,6 @@
     border-radius: 3px;
     background: var(--green);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -719,12 +547,6 @@
     background:
       radial-gradient(ellipse 90% 40% at 50% 0%, #11160f 0%, #060606 58%);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .story .head { text-align: center; margin-bottom: 56px; }
@@ -732,12 +554,6 @@
     font-size: 50px; font-weight: 800; line-height: 1.34;
     margin-top: 18px; letter-spacing: -0.025em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .story .head h2 .g { color: var(--green); }
@@ -749,12 +565,6 @@
     font-weight: 500; letter-spacing: -0.01em;
     text-wrap: pretty;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .read p + p { margin-top: 26px; }
@@ -770,12 +580,6 @@
     font-size: 38px; font-weight: 800; line-height: 1.45;
     letter-spacing: -0.025em; color: #ffffff;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .pull .g { color: var(--green); }
@@ -789,24 +593,12 @@
     border-radius: 18px;
     padding: 38px 40px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .sources .lead {
     font-size: 16px; font-weight: 700; letter-spacing: 0.22em;
     color: var(--green); margin-bottom: 24px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .sources ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
@@ -814,12 +606,6 @@
     font-size: 20px; color: #e3e7e5; font-weight: 600;
     padding-left: 38px; position: relative; line-height: 1.5;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .sources li .n {
@@ -829,24 +615,12 @@
     font-size: 14px; font-weight: 800;
     display: flex; align-items: center; justify-content: center;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .sources li small {
     display: block; font-size: 15px; color: var(--muted);
     font-weight: 500; margin-top: 4px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -860,12 +634,6 @@
     border: 1px solid var(--card-border);
     background: #111; box-shadow: 0 14px 38px rgba(0,0,0,0.55);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .frame img { width: 100%; display: block; }
@@ -874,15 +642,27 @@
     font-size: 17px; color: var(--muted); font-weight: 600;
     letter-spacing: -0.01em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .story-imgs .cap .g { color: var(--green); font-weight: 700; }
+
+  /* real 1:1 chat proof — equal-height row */
+  .chat-proof { max-width: 880px; margin: 40px auto 0; }
+  .chat-proof .chat-row {
+    display: flex; justify-content: center; align-items: stretch; gap: 16px;
+  }
+  .chat-proof .chat-row .frame {
+    flex: 0 1 auto; height: 560px;
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--card-border); background: #111;
+    box-shadow: 0 14px 38px rgba(0,0,0,0.55);
+  }
+  .chat-proof .chat-row .frame img { height: 100%; width: auto; display: block; }
+  .chat-proof .cap {
+    text-align: center; margin-top: 20px;
+    font-size: 17px; color: var(--muted); font-weight: 600; letter-spacing: -0.01em;
+  }
+  .chat-proof .cap .g { color: var(--green); font-weight: 700; }
 
   /* current-body gallery (mismatched ratios → contain on dark) */
   .now-grid { display: grid; grid-template-columns: 0.78fr 1fr; gap: 16px; align-items: stretch; }
@@ -903,12 +683,6 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -919,12 +693,6 @@
     background:
       radial-gradient(ellipse 80% 56% at 50% 50%, #16271c 0%, #070707 64%);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .finalcta .lead-q {
@@ -932,12 +700,6 @@
     font-size: 26px; font-weight: 600; line-height: 1.6;
     color: #cfd4d2; letter-spacing: -0.01em;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .finalcta .lead-q .g { color: var(--green); font-weight: 800; }
@@ -945,12 +707,6 @@
     font-size: 58px; font-weight: 800; line-height: 1.3;
     letter-spacing: -0.03em; color: #fff;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .finalcta .title .g { color: var(--green); }
@@ -964,39 +720,21 @@
     padding: 40px;
     text-align: left;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .badge {
-    display: inline-block; font-size: 14px; font-weight: 800;
+    display: inline-block; font-size: 17px; font-weight: 800;
     letter-spacing: 0.16em; color: #06140b; background: var(--green);
     padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
-  .offer h3 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
+  .offer h3 { font-size: 38px; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
   .offer .offer-list { margin-top: 24px; display: flex; flex-direction: column; gap: 14px; }
   .offer .offer-item {
     display: flex; align-items: flex-start; gap: 14px;
     font-size: 20px; font-weight: 600; color: #dfe3e1; line-height: 1.5;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .offer-item::before {
@@ -1006,12 +744,6 @@
     font-size: 16px; font-weight: 800;
     display: flex; align-items: center; justify-content: center;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .ph {
@@ -1020,12 +752,6 @@
     color: var(--muted); font-size: 16px; font-weight: 600; line-height: 1.6;
     background: rgba(31,255,115,0.04);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .ph b { color: var(--green); }
@@ -1035,54 +761,30 @@
   .offer .group:first-of-type { border-top: none; padding-top: 4px; }
   .offer .group .gtitle {
     display: flex; gap: 14px; align-items: flex-start;
-    font-size: 22px; font-weight: 800; color: #fff;
+    font-size: 28px; font-weight: 800; color: #fff;
     letter-spacing: -0.01em; line-height: 1.4;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .group .gtitle .gn {
-    flex-shrink: 0; width: 30px; height: 30px; border-radius: 8px;
-    background: var(--green); color: #06140b; font-size: 15px; font-weight: 800;
+    flex-shrink: 0; width: 36px; height: 36px; border-radius: 8px;
+    background: var(--green); color: #06140b; font-size: 18px; font-weight: 800;
     display: flex; align-items: center; justify-content: center; margin-top: 2px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .group .gtitle .free {
-    display: inline-block; margin-left: 8px; font-size: 14px; font-weight: 800;
+    display: inline-block; margin-left: 8px; font-size: 18px; font-weight: 800;
     color: var(--green); background: rgba(31,255,115,0.12);
     padding: 2px 9px; border-radius: 6px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .group .gtitle .opt {
-    display: inline-block; margin-left: 8px; font-size: 13px; font-weight: 700;
+    display: inline-block; margin-left: 8px; font-size: 16px; font-weight: 700;
     color: var(--muted); background: rgba(255,255,255,0.06);
     padding: 2px 9px; border-radius: 6px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .group .strike { color: var(--muted); text-decoration: line-through; font-weight: 700; }
@@ -1090,36 +792,18 @@
     margin: 14px 0 0 44px; list-style: none;
     display: flex; flex-direction: column; gap: 10px;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .sub li {
     position: relative; padding-left: 22px;
-    font-size: 17px; font-weight: 500; color: #cfd4d2; line-height: 1.5;
+    font-size: 20px; font-weight: 500; color: #cfd4d2; line-height: 1.5;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .offer .sub li::before {
     content: ""; position: absolute; left: 0; top: 9px;
     width: 7px; height: 7px; border-radius: 2px; background: var(--green);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -1134,12 +818,6 @@
     box-shadow: 0 14px 40px rgba(31,255,115,0.28);
     transition: transform .15s ease, box-shadow .15s ease;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .apply-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 48px rgba(31,255,115,0.42); }
@@ -1151,12 +829,6 @@
     font-size: 30px; font-weight: 800; line-height: 1.5;
     letter-spacing: -0.02em; color: #fff;
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
   .finalcta .closer .g { color: var(--green); }
@@ -1164,12 +836,6 @@
     display: block; margin-top: 14px;
     font-size: 18px; font-weight: 500; color: var(--muted);
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -1182,6 +848,12 @@
     letter-spacing: 0.4em;
     font-weight: 700;
 
+
+  }
+  .footer .b { color: var(--green); }
+
+  /* =================== MOBILE RESPONSIVE =================== */
+  @media (max-width: 768px) {
     /* 인라인 폰트 클래스 모바일 오버라이드 */
     .fs-h2 { font-size: 22px !important; }
     .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
@@ -1189,17 +861,47 @@
     .fs-cap { font-size: 14px !important; }
     .fs-closer { font-size: 18px !important; }
 
-  }
-  .footer .b { color: var(--green); }
-
-  /* =================== MOBILE RESPONSIVE =================== */
-  @media (max-width: 768px) {
 
     body { padding: 0; }
     .page { width: 100%; }
 
     /* 단어 중간 줄바꿈 방지 */
     * { word-break: keep-all; overflow-wrap: break-word; }
+
+    /* 히어로 모바일 */
+    .hero { padding: 56px 22px 50px; }
+    .hero .spec-strong { font-size: 20px; padding: 2px 0 10px; }
+    .hero .tag-spec { font-size: 13px; padding: 8px 14px; }
+    .hero h1 { font-size: 30px !important; line-height: 1.34 !important; margin-top: 20px; }
+    .hero .reco { font-size: 17px; line-height: 1.7; margin-top: 22px; }
+    .hero .reco br { display: none; }
+    .hero .why { padding: 22px 20px; margin-top: 30px; }
+    .hero .why .lead { font-size: 12px; letter-spacing: 0.14em; }
+    .hero .why p { font-size: 17px; line-height: 1.7; }
+    .hero .why .warn { font-size: 17px; }
+    .hero .why .focus { font-size: 18px; margin-top: 18px; }
+    .hero .why .focus[style] { font-size: 19px; }
+    .hero .why .focus-sub { font-size: 16px; }
+    .hero .why .focus br, .hero .why .focus-sub br { display: none; }
+    .hero .why .why-img { margin-top: 18px; }
+
+    /* WHY 박스 — 인라인 크기 모바일 캡 (PC 크기는 유지) */
+    .hero .why p { font-size: 17px !important; line-height: 1.7 !important; }
+    .hero .why .warn { font-size: 18px !important; }
+    .hero .why p span, .hero .why .warn span { font-size: inherit !important; }
+    .hero .why .why-cap { font-size: 14px !important; }
+    .hero .why .why-cap * { font-size: inherit !important; }
+
+    /* 전자책 — 표지 위, 목록 아래로 한곳에 모아서 */
+    .offer .ebook-row { flex-direction: column; align-items: center; gap: 16px; }
+    .offer .ebook-cover { width: 58%; max-width: 210px; }
+    .offer .ebook-row .sub { width: 100%; }
+    .offer .sub li { font-size: 16px !important; }
+    .offer .sub li * { font-size: inherit !important; }
+    .offer .gtitle { font-size: 17px !important; line-height: 1.5 !important; }
+    .offer .gtitle * { font-size: inherit !important; }
+    .offer h3 { font-size: 22px !important; line-height: 1.45 !important; }
+    .offer h3 * { font-size: inherit !important; }
 
     /* 폰트 크기 축소 */
     .reviews .head h2 { font-size: 26px !important; line-height: 1.4 !important; }
@@ -1238,8 +940,9 @@
     .collage { flex-direction: column; }
     .col { width: 100%; }
 
-    /* 비포애프터: 2x2 그리드 유지 */
-    .transforms { grid-template-columns: 1fr 1fr; gap: 8px; }
+    /* 비포애프터: 2열, 마지막 한 장은 가운데 정렬 */
+    .transforms { gap: 8px; }
+    .tcard { flex: 0 1 calc((100% - 8px) / 2); }
     .tcard .tag { font-size: 11px; padding: 3px 8px; }
 
     /* 선수 사진: 2열 그리드로 나란히 */
@@ -1264,6 +967,13 @@
     .story-imgs { margin-top: 28px; }
     .now-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
 
+    /* 실제 1:1 카톡 관리 - 같은 높이로 나란히 */
+    .chat-proof { margin-top: 28px; }
+    .chat-proof .chat-row { gap: 8px; }
+    .chat-proof .chat-row .frame { height: 340px; border-radius: 10px; }
+    .chat-proof .cap { font-size: 14px !important; }
+    .chat-proof .cap * { font-size: 14px !important; }
+
     /* 신청 버튼 */
     .apply-btn { min-width: unset; width: 100%; font-size: 22px !important; padding: 22px 20px; }
 
@@ -1278,12 +988,6 @@
     /* 스토리 캡션 */
     .story-imgs .cap { font-size: 14px !important; }
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
 
     /* ── 특정 문장 한 줄 처리 ── */
@@ -1342,12 +1046,6 @@
     .apply-btn { font-size: 20px !important; }
 
 
-    /* 인라인 폰트 클래스 모바일 오버라이드 */
-    .fs-h2 { font-size: 22px !important; }
-    .fs-body { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-body-lg { font-size: 17px !important; line-height: 1.8 !important; }
-    .fs-cap { font-size: 14px !important; }
-    .fs-closer { font-size: 18px !important; }
 
   }
 
@@ -1365,12 +1063,56 @@
 
 <div class="page" data-screen-label="상세페이지">
 
+  <!-- ============ HERO : 고도비만 전문 ============ -->
+  <section class="hero" data-screen-label="히어로">
+    <div class="spec-strong" style="color: rgb(164, 246, 255); height: 50px">고도비만 남성 전문</div>
+    <span class="tag-spec" style="height: 5px; font-size: 25px; color: rgb(2, 2, 3); background-color: rgb(164, 246, 240); padding: 20px 18px">1:1 온라인 다이어트 코칭</span>
+    <h1><span class="glow" style="color: rgb(255, 254, 254);">100kg가 넘는 <span style="color: rgb(83, 142, 240);">남자&nbsp;</span>라면</span><br>
+닭가슴살만 먹는 다이어트는<br>
+<span class="g" style="color: rgb(124, 251, 60)">이제 그만.</span></h1>
+    <p class="reco" style="font-size: 33px">
+      고도비만에서 <b>직접 몸을 만든 영양학 전공자</b>의 1:1 코칭으로,<br>
+      이미 수많은 남성분들은 <span class="g">&nbsp;변화</span>를 시작했습니다.
+    </p>
+
+    <div class="why">
+      <div class="lead" style="font-size: 33px">고도비만은 달라야 합니다</div>
+      <p style="font-size: 27px;">
+        고도비만은 무작정 식단으로 살을 빼는 게 아닙니다.<br>
+        <span class="g" style="font-size: 27px;">모든 과정</span>이 필요하고,<br>
+        천천히 바꿔 나가는 것이 무엇보다 중요합니다.
+      </p>
+      <div class="why-img ba">
+        <img loading="lazy" src="proof-ba.webp" alt="비포 애프터">
+      </div>
+
+      <p class="focus" style="text-align: center;">
+        <span class="g">직접 경험해본 사람</span>은 다릅니다.
+      </p>
+
+      <p class="warn" style="font-size: 29px;">
+        일반인과 <span class="g" style="font-size: 29px;">같은 방법</span>으로 하면<br>
+        99%는 결국 포기하게 됩니다.
+      </p>
+
+      <p class="focus" style="font-size: 40px;">
+        그래서 저는 <span class="g" style="font-size: 40px; color: rgb(106, 255, 31);"><br>직접 발로 뛰고, 소수 정예 시스템으로</span><br>관리합니다.
+      </p>
+      <p class="focus-sub" style="font-size: 35px">대형 플랫폼은 돈이 안 되니까 절대 못 하는<br>그 밀착 관리를, 직접 진행합니다.</p>
+
+      <div class="why-img">
+        <img loading="lazy" src="why-files.webp" alt="피식푸드 관리 파일·자료">
+      </div>
+      <p class="why-cap">실제 관리 자료 · <span class="g">관리 파일 목록</span></p>
+    </div>
+  </section>
+
   <!-- ============ TOP : REVIEWS ============ -->
   <section class="reviews">
     <div class="head">
       <span class="kicker">REAL DM &amp; 후기</span>
-      <h2 class="fs-h2">이미 수많은 분들이<br><span class="g" class="fs-h2">혼자서</span> 변화를 만들고 있습니다</h2>
-      <p style="">온라인 코칭, 피티 리얼 후기</p>
+      <h2 class="fs-h2">이미 수많은 분들이<br><span class="g">혼자서</span> 변화를 만들고 있습니다</h2>
+      <p style="font-size: 25px;">온라인 코칭, 피티 후기</p>
     </div>
 
     <div class="collage">
@@ -1390,12 +1132,13 @@
 
     <!-- Before / After transformations -->
     <div class="transform-block">
-      <div class="sub-label">말이 아닌 <span class="g">결과</span>로 증명합니다 — 직접 만든 변화</div>
+      <div class="sub-label" style="font-size: 30px">말이 아닌 <span class="g">결과</span>로 증명합니다 — 직접 만든 변화</div>
       <div class="transforms">
         <div class="tcard"><img loading="lazy" src="transform-1.webp" alt="비포 애프터 1"><div class="tag">BEFORE → AFTER</div></div>
         <div class="tcard"><img loading="lazy" src="transform-2.webp" alt="비포 애프터 2"><div class="tag">BEFORE → AFTER</div></div>
         <div class="tcard"><img loading="lazy" src="transform-4.webp" alt="비포 애프터 3"><div class="tag">BEFORE → AFTER</div></div>
         <div class="tcard"><img loading="lazy" src="transform-3.webp" alt="비포 애프터 4"><div class="tag">BEFORE → AFTER</div></div>
+        <div class="tcard"><img loading="lazy" src="transform-5.webp" alt="비포 애프터 5"><div class="tag">BEFORE → AFTER</div></div>
       </div>
     </div>
   </section>
@@ -1422,7 +1165,7 @@
       그렇다면 일반인은? — <span class="g" style="">
 5배는 더 쉽습니다.</span>
     </div>
-    <div class="punch-sub">
+    <div class="punch-sub" style="font-size: 25px">
       선수 대회 준비부터 일반인 온라인 영양 코칭까지 — 극한을 설계해 본 사람이 짜는 식단은 다릅니다.
     </div>
   </section>
@@ -1474,14 +1217,13 @@
   <section class="story" data-screen-label="나의 이야기">
     <div class="head">
       <span class="kicker">MY STORY · 나의 이야기</span>
-      <h2>한때 저는,
-거울 앞에 서는 게 가장 싫었습니다</h2>
+      <h2>한때 저는,<br>거울 앞에 서는 게 가장 싫었습니다</h2>
     </div>
 
-    <div class="read" class="fs-body">
-      <p class="beat" class="fs-body">고등학교 내내 따라다닌 별명이 있었습니다.</p>
-      <p class="beat" class="fs-body">입에 담기도 민망한, 그런 별명.</p>
-      <p class="beat" class="fs-body">거울 앞에 서는 게 싫었고, 사진 찍히는 게 두려웠습니다.</p>
+    <div class="read">
+      <p class="beat">고등학교 내내 따라다닌 별명이 있었습니다.</p>
+      <p class="beat">입에 담기도 민망한, 그런 별명.</p>
+      <p class="beat">거울 앞에 서는 게 싫었고, 사진 찍히는 게 두려웠습니다.</p>
       <p style="margin-top: 26px;" class="fs-body">그냥 <b class="fs-body">타고난 거라고 생각했습니다.</b><br>'뚱뚱한 유전자, 어쩔 수 없다'고.</p>
     </div>
 
@@ -1492,11 +1234,11 @@
 
     <div class="pull">하지만 무언가는 달라져야 했습니다.<br>그래서 <span class="g">발악했습니다.</span></div>
 
-    <div class="read" class="fs-body">
-      <p class="beat" class="fs-body">닭가슴살만 먹었습니다.</p>
-      <p class="beat" class="fs-body">매일 운동했습니다.</p>
-      <p class="beat" class="fs-body">굶었습니다.</p>
-      <p class="beat" class="fs-body">그렇게 꼬박 1년을 버텼습니다.</p>
+    <div class="read">
+      <p class="beat">닭가슴살만 먹었습니다.</p>
+      <p class="beat">매일 운동했습니다.</p>
+      <p class="beat">굶었습니다.</p>
+      <p class="beat">그렇게 꼬박 1년을 버텼습니다.</p>
       <p style="margin-top: 26px;" class="fs-body">결과는? <b class="fs-body">겨우 15kg 빠진 95kg.</b><br>더 끔찍한 건, 그마저도 오래가지 못했다는 겁니다.</p>
     </div>
 
@@ -1505,31 +1247,29 @@
     <!-- 2-year starvation diet result -->
     <div class="story-imgs solo">
       <div class="frame"><img loading="lazy" src="story-2yr.webp" alt="굶어서 다이어트한 몸"></div>
-      <div class="cap" class="fs-cap">굶어서 2년 다이어트 했을 때 — <span class="g" class="fs-cap">5년 전 예쁘게 빠지지 않았던 몸</span><div><br></div></div>
+      <div class="cap" style="font-size: 30px">굶어서 2년 다이어트 했을 때 — <span class="g">5년 전 예쁘게 빠지지 않았던 몸</span><div><br></div></div>
     </div>
 
-    <div class="read" class="fs-body">
-      <p class="beat" class="fs-body"><div><br></div>
-
-영양 세미나를 찾아다녔습니다.</p>
-      <p class="beat" class="fs-body">다이어트 상담을 받았습니다.</p>
-      <p class="beat" class="fs-body">식품영양학과 교수님 연구실 문까지 두드렸습니다.</p>
+    <div class="read" style="font-size: 35px">
+      <p class="beat">영양 세미나를 찾아다녔습니다.</p>
+      <p class="beat">다이어트 상담을 받았습니다.</p>
+      <p class="beat">식품영양학과 교수님 연구실 문까지 두드렸습니다.</p>
       <p style="margin-top: 26px;" class="fs-body">그리고 전공서적과 스포츠영양학을 파고들며,<br>몇 년에 걸쳐 다이어트 지식을 제대로 쌓아 나갔습니다.</p>
     </div>
 
     <!-- 4-source credential -->
     <div class="sources">
-      <div class="lead">내 식단이 다른 이유 — 4가지의 결합</div>
+      <div class="lead" style="font-size: 30px">피식푸드가 다른 다이어트 플렛폼과<br>다른 이유 — 4가지의 결합</div>
       <ul>
         <li><span class="n">1</span>식품영양학 · 스포츠건강관리학 <b>전공 지식</b></li>
         <li><span class="n">2</span>미국체력관리협회(NSCA) <b>상급 스포츠영양코치 자격</b><small>검증된 근거로만 설계합니다.</small></li>
         <li><span class="n">3</span>교수 · 세미나 · 논문에서 뽑아낸 <b>실제 데이터</b></li>
-        <li><span class="n">4</span>내 몸으로 직접 검증한 <b>현장 경험</b></li>
+        <li><span class="n">4</span>내 몸으로 직접 검증한 <b>현장 경험</b><small>수많은 코칭 데이터와 경험</small></li>
       </ul>
     </div>
 
     <div class="read" style="margin-top:40px;">
-      <p class="fs-body">이 네 가지를 합쳐 <b class="fs-body">'나만의 시스템'</b>을 만들었습니다.<br>그리고 그 시스템은, 가장 먼저 <span class="g" class="fs-body">제 몸</span> 위에서 증명됐습니다.</p>
+      <p class="fs-body">이 네 가지를 합쳐 <b class="fs-body">'나만의 시스템'</b>을 만들었습니다.<br>그리고 그 시스템은, 가장 먼저 <span class="g">제 몸</span> 위에서 증명됐습니다.</p>
     </div>
 
     <!-- before / after proof -->
@@ -1541,15 +1281,15 @@
 
     <div class="story-rule"></div>
 
-    <div class="read" class="fs-body">
-      <p class="fs-body">이제는 당신이 <b class="fs-body">무엇을 해야 하는지</b> 알려주고,<br>그것을 끝까지 <span class="g" class="fs-body">관리</span>해 드릴 차례입니다.</p>
-      <p class="fs-body">지켜야 할 것만 지키면 다이어트는 실패할 수가 없고,<br><b class="fs-body">요요</b>까지 확실하게 막을 수 있습니다.</p>
+    <div class="read">
+      <p class="fs-body">이제는 당신이 <b class="fs-body">무엇을 해야 하는지</b> 알려주고,<br>그것을 끝까지 <span class="g">관리</span>해 드릴 차례입니다.</p>
+      <p class="fs-body" style="font-size: 30px">지켜야 할 것만 지키면 다이어트는 실패할 수가 없고,<br><b class="fs-body">요요</b>까지 확실하게 막을 수 있습니다.</p>
     </div>
 
     <!-- current body -->
     <div class="story-imgs">
       <div class="now-grid">
-        <div class="frame"><img loading="lazy" src="story-now-1.webp" alt="현재 몸 - 프론트"></div>
+        <div class="frame"><img loading="lazy" src="story-now-1b.webp" alt="현재 몸 - 프론트"></div>
         <div class="frame"><img loading="lazy" src="story-now-2.webp" alt="현재 몸 - 백"></div>
       </div>
       <div class="cap">유전이 아니라, <span class="g">시스템의 결과</span>입니다.</div>
@@ -1558,12 +1298,12 @@
 
   <!-- ============ CLOSING : WHY YOU NEED COACHING (유도글) ============ -->
   <section class="story" data-screen-label="유도글" style="padding-top:36px;background:#060606;">
-    <div class="read" class="fs-body-lg">
+    <div class="read">
       <p class="fs-body-lg">여기까지 읽으셨다면,<br>당신은 이미 <b class="fs-body-lg">다이어트 의지가 강한 사람</b>입니다.</p>
-      <p class="fs-body-lg">하지만 당신도 느꼈을 겁니다.<br>혼자 시작한 다이어트는 <span class="g" class="fs-body-lg">결국 실패한다</span>는 사실을.</p>
+      <p class="fs-body-lg">하지만 당신도 느꼈을 겁니다.<br>혼자 시작한 다이어트는 <span class="g">결국 실패한다</span>는 사실을.</p>
       <p class="beat" style="margin-top: 26px; font-size: 32px;">운동은 하다가 말 것이고,</p>
-      <p class="beat" class="fs-body-lg">식단은 귀찮아 닭가슴살만 먹다&nbsp;<div style="">결국 폭식으로 이어지고,</div></p>
-      <p class="beat" class="fs-body-lg">한 달 꾸준하던 헬스장도,&nbsp;<div>어느 순간 발길이 끊깁니다.</div></p>
+      <p class="beat">식단은 귀찮아 닭가슴살만 먹다&nbsp;</p><div style="font-size: 25px;">결국 폭식으로 이어지고,</div><p></p>
+      <p class="beat">한 달 꾸준하던 헬스장도,&nbsp;</p><div style="font-size: 25px;">어느 순간 발길이 끊깁니다.</div><p></p>
     </div>
 
     <div class="pull lg">결국 다이어트는<br><span class="g">'관리'가 전부</span>입니다.</div>
@@ -1571,22 +1311,28 @@
     <!-- actual management files -->
     <div class="story-imgs solo sq">
       <div class="frame"><img loading="lazy" src="manage-files.webp" alt="피식푸드 관리 파일·자료"></div>
-      <div class="cap">실제로 관리되는 <span class="g">피식푸드만의 파일과 정보들</span></div>
+      <div class="cap" style="font-size: 30px">실제로 관리되는 <span class="g">피식푸드만의 파일과 정보들</span></div>
+    </div>
+
+    <!-- real 1:1 chat management proof -->
+    <div class="chat-proof">
+      <div class="chat-row">
+        <div class="frame"><img loading="lazy" src="kakao-1.webp" alt="실제 1:1 관리 - 식단 추천"></div>
+        <div class="frame"><img loading="lazy" src="kakao-2.webp" alt="실제 1:1 관리 - 컨디션·식단 피드백"></div>
+      </div>
+      <div class="cap" style="font-size: 25px">매주 직접 주고받는 <span class="g">실제 1:1 밀착 관리</span> — 식단·운동·컨디션까지</div>
     </div>
 
     <div class="read">
-      <p style="text-align: center; font-size: 32px">
-
-아무리 지식이 많아도,
-관리가 안 되면 실패입니다.</p>
+      <p style="text-align: center;"><div><br></div><div><br></div>아무리 지식이 많아도,<br>관리가 안 되면 실패입니다.</p>
     </div>
 
     <div class="story-rule"></div>
 
-    <div class="read" class="fs-body">
-      <p class="fs-body">제 인생에서 가장 큰 터닝포인트는, <span class="g" class="fs-body">다이어트</span>였습니다.</p>
+    <div class="read">
+      <p class="fs-body">제 인생에서 가장 큰 터닝포인트는, <span class="g">다이어트</span>였습니다.</p>
       <p class="fs-body">살을 빼고 나니 자존감이 올라갔고,<br>사람들과 더 많이 어울릴 수 있었고,<br>무엇보다 <b class="fs-body">나 자신을 사랑하게 됐습니다.</b></p>
-      <p class="fs-body">헬스트레이너로 지인들의 다이어트를 코칭하면서<br>"덕분에 인생이 바뀌었다"는 말을 들을 때마다,<br>말로 다 못 할 <span class="g" class="fs-body">뿌듯함</span>을 느꼈습니다.</p>
+      <p class="fs-body">헬스트레이너로 지인들의 다이어트를 코칭하면서<br>"덕분에 인생이 바뀌었다"는 말을 들을 때마다,<br>말로 다 못 할 <span class="g">뿌듯함</span>을 느꼈습니다.</p>
     </div>
 
     <!-- thank-you messages -->
@@ -1595,7 +1341,7 @@
         <div class="frame wide"><img loading="lazy" src="thanks-2.webp" alt="회원 감사 메세지 1"></div>
         <div class="frame portrait"><img loading="lazy" src="thanks-1.webp" alt="회원 감사 메세지 2"></div>
       </div>
-      <div class="cap">실제 회원님들이 보내주신 <span class="g">감사 메세지</span></div>
+      <div class="cap" style="font-size: 27px">실제 회원님들이 보내주신 <span class="g">감사 메세지</span></div>
     </div>
 
     <div class="read" style="margin-top:60px;">
@@ -1603,7 +1349,7 @@
     </div>
     <div class="pull">"지금 내 지식으로 <span class="g">1:1 밀착 관리</span>를 해준다면,<br>얼마나 많은 인생을 바꿀 수 있을까?"</div>
     <div class="read">
-      <p style="text-align: center;" class="fs-body-lg">그 질문 하나에서 시작된 것이,<br>바로 <b class="fs-body-lg">피식푸드 −20kg 챌린지</b>입니다.</p>
+      <p style="text-align: center; font-size: 25px" class="fs-body-lg">그 질문 하나에서 시작된 것이,<br>바로 피식푸드 −20kg 챌린지입니다.</p>
     </div>
   </section>
 
@@ -1614,27 +1360,28 @@
 
     <div class="offer">
       <span class="badge">WHAT YOU GET · 제공 혜택</span>
-      <h3 style="">당신을 위한 1:1 밀착 관리
-
-<div><br></div></h3>
+      <h3 style="">당신을 위한 1:1 밀착 관리,<br>관리 하나만은 확실하게 자부합니다</h3>
 
       <div class="group">
-        <div class="gtitle"><span class="gn">1</span><div>피식푸드 <span class="strike">정가 4만원</span> '나홀로 다이어트 전자책'<span class="free">무료 제공</span></div></div>
-        <ul class="sub" style="font-size: 25px;">
-          <li style="font-size: 25px;">다이어트 기록 프로그램</li>
-          <li style="font-size: 25px;">30가지 식단 레시피 제공</li>
-          <li style="font-size: 25px;">유지 칼로리 자동화 웹사이트</li>
-          <li style="font-size: 25px;">근력 · 유산소 운동 루틴 파일 제공</li>
-          <li style="font-size: 25px;">내돈내산 직접 먹어본 다이어트 추천템 링크 제공</li>
-        </ul>
+        <div class="gtitle"><span class="gn">1</span><div>피식푸드 <span class="strike">정가 5만원</span> '나홀로 다이어트 전자책'<span class="free">무료 제공</span></div></div>
+        <div class="ebook-row">
+          <div class="ebook-cover"><img loading="lazy" src="ebook-cover.webp" alt="나홀로 다이어트 전자책 표지"></div>
+          <ul class="sub" style="font-size: 28px;">
+            <li style="font-size: 28px;">다이어트 기록 프로그램</li>
+            <li style="font-size: 28px;">30가지 식단 레시피 제공</li>
+            <li style="font-size: 28px;">유지 칼로리 자동화 웹사이트</li>
+            <li style="font-size: 28px;">근력 · 유산소 운동 루틴 파일 제공</li>
+            <li style="font-size: 28px;">내돈내산 직접 먹어본 다이어트 추천템 링크 제공</li>
+          </ul>
+        </div>
       </div>
 
       <div class="group">
         <div class="gtitle"><span class="gn">2</span><div>영양 · 식단 <b style="color:var(--green);">밀착 관리</b></div></div>
-        <ul class="sub" style="font-size: 25px;">
-          <li style="font-size: 25px;">주기적 밀착 줌(ZOOM) 상담</li>
-          <li style="font-size: 25px;">매주 식단 · 컨디션 · 운동 피드백</li>
-          <li style="font-size: 25px;">다이어트 세일템 추천</li>
+        <ul class="sub" style="font-size: 28px;">
+          <li style="font-size: 28px;">주기적 밀착 줌(ZOOM) 상담</li>
+          <li style="font-size: 28px;">매주 식단 · 컨디션 · 운동 피드백</li>
+          <li style="font-size: 28px;">다이어트 세일템 추천</li>
         </ul>
       </div>
 
@@ -1647,8 +1394,8 @@
       </div>
     </div>
 
-    <div class="closer" class="fs-closer">
-      <span class="g" class="fs-closer">진심으로 간절한 분들만</span> 신청해 주세요.
+    <div class="closer">
+      <span class="g">진심으로 간절한 분들만</span> 신청해 주세요.
       <small class="fs-closer">딱 그만큼의 변화를, 끝까지 책임지겠습니다.</small>
     </div>
 
